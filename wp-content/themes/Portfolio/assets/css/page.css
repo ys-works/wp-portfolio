@@ -1,0 +1,348 @@
+.page-template-page-product .breadcrumb {
+  max-width: 1200px;
+  margin: auto;
+  color: #fff;
+  text-align: left;
+  width: 100%;
+  z-index: 1;
+}
+
+.page-template-page-product .breadcrumb a {
+  color: #fff;
+}
+
+.page-template-page-product .main-visual {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-image: url(/wp-content/themes/Portfolio/assets/images/product/product_visual.jpg);
+  background-size: cover;
+  background-position: center 45%;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.page-template-page-product .main-visual::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 40%, rgba(0, 0, 0, 0) 100%);
+  z-index: 0;
+}
+
+.page-template-page-product .main-visual-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.page-template-page-product .main-visual-inner h1 {
+  margin: 0;
+  text-align: left;
+}
+
+.page-template-page-product .product-wrap {
+  max-width: 1200px;
+  margin: 40px auto;
+  width: 100%;
+}
+
+.page-template-page-product .product-wrap h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: url(/wp-content/themes/Portfolio/assets/images/icon/icon_niku.svg) no-repeat left center;
+  background-size: 32px 32px;
+  padding-left: 36px;
+  margin-bottom: 40px;
+  border-bottom: 4px solid;
+  -o-border-image: linear-gradient(to right, #333 0%, #333 10%, #ffd700 10%, #ffd700 50%, #333 50%, #333 100%) 1;
+     border-image: linear-gradient(to right, #333 0%, #333 10%, #ffd700 10%, #ffd700 50%, #333 50%, #333 100%) 1;
+}
+
+.page-template-page-product .product-category {
+  height: 100%;
+  margin-bottom: 60px;
+}
+
+.page-template-page-product .product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.page-template-page-product .product-item {
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.page-template-page-product .product-image:hover {
+  overflow: hidden;
+}
+
+.page-template-page-product .product-image img:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s linear;
+}
+
+.page-template-page-product .product-category a:hover {
+  color: #d17600;
+}
+
+.page-template-page-product .product-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.page-template-page-product-detail .breadcrumb {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.page-template-page-product-detail .main-visual {
+  height: 400px;
+  background-image: url(/wp-content/themes/Portfolio/assets/images/product/main-visual.jpg);
+  background-size: cover;
+  background-position: center 65%;
+  background-repeat: no-repeat;
+}
+
+.page-template-page-product-detail .main-visual-inner {
+  max-width: 1200px;
+  height: 100%;
+  margin: auto;
+  color: #fff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.product-detail {
+  max-width: 1200px;
+  margin: 40px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+}
+
+.product-detail figure {
+  margin-bottom: 40px;
+}
+
+.page-template-page-about .breadcrumb {
+  max-width: 1200px;
+  margin: auto;
+  color: #fff;
+  text-align: left;
+  width: 100%;
+  z-index: 1;
+}
+
+.page-template-page-about .breadcrumb a {
+  color: #fff;
+}
+
+.page-template-page-about .main-visual {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-image: url(/wp-content/themes/Portfolio/assets/images/about/about-main-visual.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.page-template-page-about .main-visual::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 40%, rgba(0, 0, 0, 0) 100%);
+  z-index: 0;
+}
+
+.page-template-page-about .main-visual-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.page-template-page-about .main-visual-inner h1 {
+  margin: 0;
+  text-align: left;
+}
+
+.page-template-page-about section {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.page-template-page-about .about-inner {
+  max-width: 1200px;
+  margin: 120px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  width: 100%;
+}
+
+.page-template-page-about .about-item {
+  padding: 20px;
+  border: 1px solid #ccc;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-template-page-about .about-item a {
+  width: 100%;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.page-template-page-about .about-item a:hover h2 {
+  color: #ffd700;
+  text-decoration: underline;
+}
+.page-template-page-about .about-item a:hover img {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}
+
+.page-template-page-about .about-item h2 {
+  width: 100%;
+  color: #FFF;
+  padding: 10px 0 10px 20px;
+  position: absolute;
+  top: 181px;
+  left: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+
+.page-template-page-about-detail .breadcrumb {
+  max-width: 1200px;
+  margin: auto;
+  color: #fff;
+  text-align: left;
+  width: 100%;
+  z-index: 1;
+}
+
+.page-template-page-about-detail .breadcrumb a {
+  color: #fff;
+}
+
+.page-template-page-about-detail .main-visual {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-image: url(/wp-content/themes/Portfolio/assets/images/about/about-main-visual.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.page-template-page-about-detail .main-visual::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 40%, rgba(0, 0, 0, 0) 100%);
+  z-index: 0;
+}
+
+.page-template-page-about-detail .main-visual-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.page-template-page-about-detail .main-visual-inner h1 {
+  margin: 0;
+  text-align: left;
+}
+
+.page-template-page-about-detail .about-detail-wrap {
+  max-width: 1200px;
+  margin: 40px auto 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+}
+
+.page-template-page-about-detail .about-detail {
+  height: 100%;
+}
+
+.page-template-page-about-detail .about-detail-content .wp-block-columns {
+  font-size: 1rem;
+  padding: 0 0 20px;
+}
+
+.page-template-page-about-detail .wp-block-table table {
+  width: 100%;
+  table-layout: fixed;
+}
+.page-template-page-about-detail .wp-block-table td:nth-child(1),
+.page-template-page-about-detail .wp-block-table th:nth-child(1) {
+  width: 30%;
+  padding: 20px;
+  font-weight: bold;
+  background: #f7f6f6;
+}
+.page-template-page-about-detail .wp-block-table td:nth-child(2),
+.page-template-page-about-detail .wp-block-table th:nth-child(2) {
+  width: 70%;
+  font-weight: bold;
+  padding: 20px;
+}/*# sourceMappingURL=page.css.map */

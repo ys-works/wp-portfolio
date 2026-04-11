@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="91.511406mm"
+   height="27.508204mm"
+   viewBox="0 0 91.511405 27.508204"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   sodipodi:docname="About.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.02"
+     inkscape:cx="210.78431"
+     inkscape:cy="236.27451"
+     inkscape:window-width="1799"
+     inkscape:window-height="1334"
+     inkscape:window-x="0"
+     inkscape:window-y="8"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer5" />
+  <defs
+     id="defs1">
+    <rect
+       x="0"
+       y="70.939903"
+       width="793.70081"
+       height="187.7821"
+       id="rect1" />
+  </defs>
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="Layer 1"
+     transform="translate(-1.8587874e-5,-1.2699661)">
+    <text
+       xml:space="preserve"
+       style="font-weight:600;font-size:38.1px;line-height:1.4;font-family:'Playfair Display';-inkscape-font-specification:'Playfair Display Semi-Bold';letter-spacing:0.722313px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;fill:#212121;fill-opacity:1;stroke-width:1"
+       x="-1.4097064"
+       y="28.244772"
+       id="text1"><tspan
+         sodipodi:role="line"
+         style="fill:#212121;fill-opacity:1;stroke-width:1"
+         x="-1.4097064"
+         y="28.244772"
+         id="tspan2">News</tspan></text>
+  </g>
+</svg>

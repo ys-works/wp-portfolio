@@ -1,0 +1,88 @@
+@charset "UTF-8";
+footer {
+  height: 30vh;
+  color: #fff;
+  background: rgb(80, 80, 80);
+}
+
+.footer-wrap {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.footer-links {
+  padding-top: 2%;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  height: 50%;
+}
+
+.footer-links ul li:first-child {
+  padding: 10px 0 0;
+}
+
+.footer-links ul li:not(:first-child) {
+  padding: 10px 0 0 18px;
+}
+
+.footer-links ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+  color: #EAEAA7;
+  text-decoration: underline;
+}
+
+.footer-links ul li:first-child a::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f138";
+  font-weight: 900;
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 3px;
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.footer-links ul li:first-child a:hover::before {
+  color: #EAEAA7;
+}
+
+.external-link::after {
+  /* Sharp Solid用の指定 */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f35d";
+  /* 調整（必要に応じて） */
+  margin-left: 5px;
+  font-size: 0.9em;
+  color: #fff;
+}
+
+.footer-container-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 0;
+  font-size: 12px;
+}/*# sourceMappingURL=footer.css.map */
