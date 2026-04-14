@@ -1,9 +1,5 @@
-/*
-
-!.gitignore
-
-!/wp-content/
-/wp-content/*
-!/wp-content/themes/
-/wp-content/themes/*
-!/wp-content/themes/Portfolio/
+*
+!wp-content/
+!wp-content/themes/
+!wp-content/themes/Portforio/
+!wp-content/themes/Portforio/**
