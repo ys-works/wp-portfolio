@@ -24,9 +24,21 @@ get_header();
   <div class="about-detail-wrap">
     <section class="about-detail">
       <div class="about-detail-inner">
-        <div class="about-detail-content">
-          <?php the_content(); ?>
-        </div>
+        <?php if (is_page('history')) : ?>
+          <div class="about-history-content">
+            <div class="ellipse-box-group">
+              <div class="ellipse-box">
+                <p>2026年</p>
+              </div>
+              <div class="line"></div>
+            </div>
+            <span class="history-title">設立</span>
+          </div>
+        <?php else : ?>
+          <div class="about-detail-content">
+            <?php the_content(); ?>
+          </div>
+        <?php endif; ?>
       </div>
     </section>
     <?php get_sidebar(); ?>

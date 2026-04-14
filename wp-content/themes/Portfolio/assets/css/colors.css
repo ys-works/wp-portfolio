@@ -674,24 +674,32 @@ div#wp-responsive-toggle a:before {
 .wp-core-ui.wp-customizer .theme-overlay .theme-header .close:focus, .wp-core-ui.wp-customizer .theme-overlay .theme-header .close:hover, .wp-core-ui.wp-customizer .theme-overlay .theme-header .right:focus, .wp-core-ui.wp-customizer .theme-overlay .theme-header .right:hover, .wp-core-ui.wp-customizer .theme-overlay .theme-header .left:focus, .wp-core-ui.wp-customizer .theme-overlay .theme-header .left:hover {
   border-bottom-color: #9ebaa0;
   color: #0073aa;
-}/*# sourceMappingURL=colors.css.map */ border-bottom-color: #3858e9;
+}/*# sourceMappingURL=colors.css.map */mize-outer-theme-controls .control-section .accordion-section-title:hover:after,
+.wp-core-ui #customize-outer-theme-controls .control-section.open .accordion-section-title:after,
+.wp-core-ui #customize-outer-theme-controls .control-section .accordion-section-title:focus:after {
+  color: #0073aa;
+}
+.wp-core-ui .customize-control .attachment-media-view .button-add-media:focus {
+  background-color: #fbfbfc;
+  border-color: #dd823b;
+  border-style: solid;
+  box-shadow: 0 0 0 1px #dd823b;
+  outline: 2px solid transparent;
+}
+.wp-core-ui .wp-full-overlay-footer .devices button:focus,
+.wp-core-ui .wp-full-overlay-footer .devices button.active:hover {
+  border-bottom-color: #dd823b;
 }
 .wp-core-ui .wp-full-overlay-footer .devices button:hover:before,
 .wp-core-ui .wp-full-overlay-footer .devices button:focus:before {
-  color: #3858e9;
+  color: #dd823b;
 }
 .wp-core-ui .wp-full-overlay .collapse-sidebar:hover,
 .wp-core-ui .wp-full-overlay .collapse-sidebar:focus {
-  color: #3858e9;
+  color: #dd823b;
 }
 .wp-core-ui .wp-full-overlay .collapse-sidebar:hover .collapse-sidebar-arrow,
 .wp-core-ui .wp-full-overlay .collapse-sidebar:focus .collapse-sidebar-arrow {
-  box-shadow: 0 0 0 1px rgb(101.9230769231, 126.5384615385, 238.0769230769), 0 0 2px 1px #3858e9;
-}
-.wp-core-ui.wp-customizer .theme-overlay .theme-header .close:focus, .wp-core-ui.wp-customizer .theme-overlay .theme-header .close:hover, .wp-core-ui.wp-customizer .theme-overlay .theme-header .right:focus, .wp-core-ui.wp-customizer .theme-overlay .theme-header .right:hover, .wp-core-ui.wp-customizer .theme-overlay .theme-header .left:focus, .wp-core-ui.wp-customizer .theme-overlay .theme-header .left:hover {
-  border-bottom-color: #3858e9;
-  color: #3858e9;
-}/*# sourceMappingURL=colors.css.map */.collapse-sidebar:focus .collapse-sidebar-arrow {
   box-shadow: 0 0 0 1px rgb(228.5391304348, 157.7173913043, 102.4608695652), 0 0 2px 1px #dd823b;
 }
 .wp-core-ui.wp-customizer .theme-overlay .theme-header .close:focus, .wp-core-ui.wp-customizer .theme-overlay .theme-header .close:hover, .wp-core-ui.wp-customizer .theme-overlay .theme-header .right:focus, .wp-core-ui.wp-customizer .theme-overlay .theme-header .right:hover, .wp-core-ui.wp-customizer .theme-overlay .theme-header .left:focus, .wp-core-ui.wp-customizer .theme-overlay .theme-header .left:hover {

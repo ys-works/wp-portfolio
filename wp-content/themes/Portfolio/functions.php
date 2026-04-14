@@ -24,13 +24,14 @@ function my_theme_enqueue_styles()
     return file_exists($dir_path . $filename) ? filemtime($dir_path . $filename) : '1.0';
   };
 
-  wp_enqueue_style('my-theme-common',     $dir_uri . 'common.css',     [],                                          $get_ver('common.css'));
-  wp_enqueue_style('my-theme-header',     $dir_uri . 'header.css',     ['my-theme-common'],                         $get_ver('header.css'));
-  wp_enqueue_style('my-theme-footer',     $dir_uri . 'footer.css',     ['my-theme-common'],                         $get_ver('footer.css'));
-  wp_enqueue_style('my-theme-archive',    $dir_uri . 'archive.css',    ['my-theme-common'],                         $get_ver('archive.css'));
-  wp_enqueue_style('my-theme-article',    $dir_uri . 'article.css',    ['my-theme-common'],                         $get_ver('article.css'));
-  wp_enqueue_style('my-theme-page',       $dir_uri . 'page.css',       ['my-theme-common'],                         $get_ver('page.css'));
-  wp_enqueue_style('my-theme-responsive', $dir_uri . 'responsive.css', ['my-theme-header', 'my-theme-footer', 'my-theme-article', 'my-theme-page'], $get_ver('responsive.css'));
+  wp_enqueue_style('my-theme-common',      $dir_uri . 'common.css',      [], $get_ver('common.css'));
+  wp_enqueue_style('my-theme-header',      $dir_uri . 'header.css',      ['my-theme-common'], $get_ver('header.css'));
+  wp_enqueue_style('my-theme-footer',      $dir_uri . 'footer.css',      ['my-theme-common'], $get_ver('footer.css'));
+  wp_enqueue_style('my-theme-archive',     $dir_uri . 'archive.css',     ['my-theme-common'], $get_ver('archive.css'));
+  wp_enqueue_style('my-theme-article',     $dir_uri . 'article.css',     ['my-theme-common'], $get_ver('article.css'));
+  wp_enqueue_style('my-theme-custom-post', $dir_uri . 'custom-post.css', ['my-theme-common'], $get_ver('custom-post.css'));
+  wp_enqueue_style('my-theme-page',        $dir_uri . 'page.css',        ['my-theme-common'], $get_ver('page.css'));
+  wp_enqueue_style('my-theme-responsive',  $dir_uri . 'responsive.css',  ['my-theme-header', 'my-theme-footer', 'my-theme-article', 'my-theme-page'], $get_ver('responsive.css'));
 }
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles');
 

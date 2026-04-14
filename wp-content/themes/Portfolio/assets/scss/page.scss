@@ -134,14 +134,28 @@
 .page-template-page-product-detail .breadcrumb {
   max-width: 1200px;
   margin: auto;
+  color: #fff;
+  text-align: left;
+  width: 100%;
+  z-index: 1;
+}
+
+.page-template-page-product-detail .breadcrumb a {
+  color: #fff;
 }
 
 .page-template-page-product-detail .main-visual {
+  position: relative;
+  width: 100%;
   height: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
   background-image: url(/wp-content/themes/Portfolio/assets/images/product/main-visual.jpg);
   background-size: cover;
-  background-position: center 65%;
+  background-position: center center;
   background-repeat: no-repeat;
+  z-index: 1;
 }
 
 .page-template-page-product-detail .main-visual-inner {
@@ -152,6 +166,40 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+.page-template-page-product-detail .main-visual::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.4) 40%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  z-index: 0;
+}
+
+.page-template-page-product-detail .main-visual-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.page-template-page-product-detail .main-visual-inner h1 {
+  margin: 0;
+  text-align: left;
 }
 
 .product-detail {
@@ -232,6 +280,7 @@
   margin: 0;
   text-align: left;
 }
+
 .page-template-page-about section {
   width: 100%;
   height: 100%;
@@ -288,6 +337,7 @@
 // page-about-detail
 // ============================================================
 // 共通
+.page-template-default .breadcrumb,
 .page-template-page-about-detail .breadcrumb {
   max-width: 1200px;
   margin: auto;
@@ -296,11 +346,12 @@
   width: 100%;
   z-index: 1;
 }
-
+.page-template-default .breadcrumb a,
 .page-template-page-about-detail .breadcrumb a {
   color: #fff;
 }
 
+.page-template-default .main-visual,
 .page-template-page-about-detail .main-visual {
   position: relative;
   width: 100%;
@@ -314,7 +365,7 @@
   background-repeat: no-repeat;
   z-index: 1;
 }
-
+.page-template-default .main-visual::before,
 .page-template-page-about-detail .main-visual::before {
   content: "";
   position: absolute;
@@ -331,6 +382,7 @@
   z-index: 0;
 }
 
+.page-template-default .main-visual .main-visual-inner,
 .page-template-page-about-detail .main-visual-inner {
   position: relative;
   z-index: 2;
@@ -345,6 +397,7 @@
   align-items: flex-start;
 }
 
+.page-template-default .main-visual .main-visual-inner h1,
 .page-template-page-about-detail .main-visual-inner h1 {
   margin: 0;
   text-align: left;
@@ -370,9 +423,6 @@
   padding: 0 0 20px;
 }
 
-
-
-
 // 会社概要
 .page-template-page-about-detail .wp-block-table {
   table {
@@ -394,3 +444,95 @@
     }
   }
 }
+
+
+// history
+.page-template-page-about-detail .about-detail {
+  flex: 3;
+}
+
+.page-template-page-about-detail .about-history-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.page-template-page-about-detail .ellipse-box-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-template-page-about-detail .ellipse-box {
+  width: 100px;
+  height: 30px;
+  background: rgb(255, 237, 155);
+  clip-path: inset(0 round 20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.page-template-page-about-detail .line {
+  width: 1px;
+  height: 300px;
+  background: #b6b6b6;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.page-template-page-about-detail .history-title {
+  margin-left: 20px;
+  padding-top: 5px;
+}
+
+// ============================================================
+// お問い合わせ
+// ============================================================
+
+.page-template-default .inquiry-form-wrap {
+  width: 100%;
+}
+
+.page-template-default section {
+  height: 100%;
+}
+
+.page-template-default .page-inquiry .wpcf7 {
+  max-width: 1200px;
+  margin: 40px auto;
+  width: 100%;
+}
+
+.page-template-default .wpcf7 .wpcf7-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.page-template-default .wpcf7 .wpcf7-form {
+  font-weight: bold;
+}
+
+.page-template-default .wpcf7 .wpcf7-form span input {
+  border: solid 2px #333;
+}
+
+.page-template-default .wpcf7 .wpcf7-form textarea {
+  border: solid 2px #333;
+}
+
+.page-template-default .wpcf7 .wpcf7-form .wpcf7-submit {
+  padding: 3px 10px;
+  border: solid 2px #333;
+  border-radius: 10px;
+  background: #333;
+  color: #fff;
+  font-weight: bold;
+  &:hover {
+    background: #ffd700;
+    color: #333;
+  }
+}
+

@@ -26,7 +26,7 @@
           <li><a href="/product/" class="nav-link nav-product"><span>Product</span></a></li>
           <li><a href="/about/" class="nav-link nav-about"><span>About</span></a></li>
           <li><a href="/news/" class="nav-link nav-news"><span>News</span></a></li>
-          <li><a href="#" class="nav-link nav-contact"><span>Contact</span></a></li>
+          <li><a href="/inquiry/" class="nav-link nav-contact"><span>Contact</span></a></li>
         </ul>
       </nav>
     </div>

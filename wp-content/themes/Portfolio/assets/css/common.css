@@ -500,7 +500,7 @@ a:visited {
 .sidebar {
   flex: 1;
   min-width: 250px;
-  padding: 24px;
+  padding: 10px;
   position: sticky;
   top: 100px;
   align-self: flex-start;
@@ -519,69 +519,95 @@ a:visited {
   margin-bottom: 10px;
 }
 
+.sidebar .sidebar-widget .no-children,
 .sidebar .sidebar-widget .sidebar-item,
 .sidebar .sidebar-widget .sidebar-toggle__item {
   font-weight: bold;
-  padding-left: 5px;
+  padding-left: 10px;
 }
+.sidebar .sidebar-widget .no-children:hover,
 .sidebar .sidebar-widget .sidebar-item:hover,
 .sidebar .sidebar-widget .sidebar-toggle__item:hover {
   color: #fff;
   font-weight: bold;
   background: rgb(121, 121, 121);
 }
+.sidebar .sidebar-widget .no-children a,
 .sidebar .sidebar-widget .sidebar-item a,
 .sidebar .sidebar-widget .sidebar-toggle__item a {
   display: block;
   color: inherit;
   font-weight: bold;
 }
+.sidebar .sidebar-widget .no-children:hover a,
 .sidebar .sidebar-widget .sidebar-item:hover a,
 .sidebar .sidebar-widget .sidebar-toggle__item:hover a {
   color: #fff;
 }
+.sidebar .sidebar-widget .no-children.current,
 .sidebar .sidebar-widget .sidebar-item.current,
 .sidebar .sidebar-widget .sidebar-toggle__item.current {
-  padding-left: 0;
+  padding-left: 5px;
 }
 
+.sidebar .sidebar-widget .no-children a,
 .sidebar .sidebar-widget .sidebar-item a {
   color: #333;
 }
+.sidebar .sidebar-widget .no-children a:visited,
 .sidebar .sidebar-widget .sidebar-item a:visited {
   color: #333;
 }
+.sidebar .sidebar-widget .no-children a:hover,
 .sidebar .sidebar-widget .sidebar-item a:hover {
   color: #fff;
 }
 
-.sidebar-toggle {
+.sidebar-toggle,
+.no-children {
   font-weight: bold;
   border-left: solid 1px #ccc;
   border-right: solid 1px #ccc;
 }
 
-.sidebar .sidebar-toggle__btn {
+.sidebar .sidebar-toggle {
   width: 100%;
-  padding-left: 5px;
   text-align: left;
   display: block;
-  background: #c0c0c0;
+  background: #ddd;
   border-bottom: solid 2px #333;
 }
 
-.sidebar-toggle__list a {
+.sidebar .sidebar-toggle__btn {
+  width: 100%;
+  text-align: left;
+  padding-left: 5px;
+}
+
+.sidebar-toggle__list a,
+.sidebar-toggle__single a {
   display: block;
   padding: 3px 10px;
 }
 
 .sidebar .current {
-  background-color: #d8d8d8;
+  background-color: #E6E2D8;
   border-left: 5px solid transparent;
   border-left-color: #888;
 }
 
+.tax-news_category .sidebar .current {
+  background-color: #ddd;
+  border-left: 0;
+  border-left-color: #888;
+}
+.tax-news_category .sidebar .current:hover {
+  background-color: rgb(121, 121, 121);
+}
+
 .sidebar-item,
-.sidebar-toggle__item {
+.sidebar-toggle__item,
+.sidebar-toggle__btn {
+  display: block;
   border-bottom: 1px solid #ccc;
 }/*# sourceMappingURL=common.css.map */

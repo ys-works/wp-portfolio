@@ -2,6 +2,10 @@
 $current_template = get_page_template_slug(get_the_ID());
 $is_product_detail = ($current_template === 'page-product-detail.php');
 $is_about_detail   = ($current_template === 'page-about-detail.php');
+
+// アーカイブページの現在のタームを取得
+$current_term = get_queried_object();
+$current_term_id = (is_tax('news_category') && $current_term) ? $current_term->term_id : 0;
 ?>
 
 <aside class="sidebar">
@@ -96,30 +100,79 @@ $is_about_detail   = ($current_template === 'page-about-detail.php');
     </div>
 
   <?php else : ?>
-    <!-- アーカイブ用サイドバー（既存） -->
+    <!-- アーカイブ用サイドバー（カスタム投稿）-->
     <div class="sidebar-widget">
       <h3>ニュースカテゴリ</h3>
       <?php
-      $terms = get_terms([
+      $parent_terms = get_terms([
         'taxonomy'   => 'news_category',
+        'parent'     => 0,
         'hide_empty' => false,
-        'orderby'    => 'parent',
+        'orderby'    => 'menu_order',
+        'order'      => 'ASC',
       ]);
-      if ($terms) :
-        foreach ($terms as $term) :
-          if ($term->parent !== 0) continue; ?>
-          <div>
-            <a href="<?php echo get_term_link($term); ?>"><?php echo esc_html($term->name); ?></a>
-          </div>
-          <?php
-          foreach ($terms as $child) :
-            if ($child->parent !== $term->term_id) continue; ?>
-            <div>
-              <a href="<?php echo get_term_link($child); ?>">- <?php echo esc_html($child->name); ?></a>
+
+      foreach ($parent_terms as $term) :
+        $child_terms = get_terms([
+          'taxonomy'   => 'news_category',
+          'parent'     => $term->term_id,
+          'hide_empty' => false,
+          'orderby'    => 'name',
+          'order'      => 'ASC',
+        ]);
+
+        $has_children = !empty($child_terms) && !is_wp_error($child_terms);
+        $is_current_parent = ($current_term_id === $term->term_id);
+        $has_current_child = false;
+
+        if ($has_children) {
+          foreach ($child_terms as $child) {
+            if ($current_term_id === $child->term_id) {
+              $has_current_child = true;
+              break;
+            }
+          }
+        }
+
+        $is_expanded = $is_current_parent || $has_current_child;
+        $toggle_id = 'news-cat-' . $term->term_id;
+      ?>
+        <div class="sidebar-toggle<?php echo !$has_children ? ' no-children' : ''; ?>">
+          <?php if ($has_children) : ?>
+            <button
+              class="sidebar-toggle__btn"
+              aria-expanded="<?php echo $is_expanded ? 'true' : 'false'; ?>"
+              aria-controls="<?php echo esc_attr($toggle_id); ?>">
+              <?php echo esc_html($term->name); ?>
+              <span class="sidebar-toggle__icon" aria-hidden="true"></span>
+            </button>
+            <ul
+              class="sidebar-toggle__list"
+              id="<?php echo esc_attr($toggle_id); ?>">
+              <?php foreach ($child_terms as $child) :
+                $is_current = ($current_term_id === $child->term_id);
+              ?>
+                <li class="sidebar-toggle__item<?php echo $is_current ? ' current' : ''; ?>">
+                  <a
+                    href="<?php echo get_term_link($child); ?>"
+                    <?php echo $is_current ? 'aria-current="page"' : ''; ?>>
+                    <?php echo esc_html($child->name); ?>
+                  </a>
+                </li>
+              <?php endforeach; ?>
+            </ul>
+          <?php else : ?>
+            <div class="sidebar-toggle__single<?php echo $is_current_parent ? ' current' : ''; ?>">
+              <a
+                href="<?php echo get_term_link($term); ?>"
+                <?php echo $is_current_parent ? 'aria-current="page"' : ''; ?>>
+                <?php echo esc_html($term->name); ?>
+              </a>
             </div>
-      <?php endforeach;
-        endforeach;
-      endif; ?>
+          <?php endif; ?>
+        </div>
+
+      <?php endforeach; ?>
     </div>
 
   <?php endif; ?>
