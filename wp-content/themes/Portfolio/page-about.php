@@ -27,7 +27,7 @@ get_header();
         <a href="/about/greeting/">
           <h2 class="about-item-title">ご挨拶</h2>
           <div class="about-item-content">
-            <img src="/wp-content/themes/Portfolio/assets/images/About/greeting.jpg" alt="ご挨拶">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/About/greeting.jpg" alt="ご挨拶">
           </div>
         </a>
       </div>
@@ -36,7 +36,7 @@ get_header();
         <a href="/about/overview/">
           <h2 class="about-item-title">会社概要</h2>
           <div class="about-item-content">
-            <img src="/wp-content/themes/Portfolio/assets/images/About/overview.jpg" alt="会社概要">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/About/overview.jpg" alt="会社概要">
           </div>
         </a>
       </div>
@@ -45,7 +45,7 @@ get_header();
         <a href="/about/history/">
           <h2 class="about-item-title">沿革</h2>
           <div class="about-item-content">
-            <img src="/wp-content/themes/Portfolio/assets/images/About/history.jpg" alt="沿革">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/About/history.jpg" alt="沿革">
           </div>
         </a>
       </div>

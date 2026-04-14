@@ -5,19 +5,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <?php wp_head(); ?>
+
 </head>
 
-<body <?php body_class(); ?> id="<?php
-  if( is_front_page() || is_home() ) {
-    echo 'top';
-  } elseif ( is_page() ) {
-    echo 'page';
-  } elseif ( is_single() ) {
-    echo 'single';
-  } else {
-    echo 'other';
-  }
-?>">
+<body <?php body_class(); ?>
+  id="<?php
+      if (is_front_page() || is_home()) {
+        echo 'top';
+      } elseif (is_page()) {
+        echo 'page';
+      } elseif (is_single()) {
+        echo 'single';
+      } else {
+        echo 'other';
+      }
+      ?>">
   <header>
     <div class="header-wrap">
       <div class="logo"><a href="<?php bloginfo('url'); ?>">Portforio</a></div>
