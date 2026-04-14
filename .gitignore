@@ -1,11 +1,9 @@
-# ディレクトリ構造維持
 /*
 
-!/wp-content
-/wp-content/*
-!/wp-content/themes
-/wp-content/themes/*
-!/wp-content/themes/Portfolio
-wp-content/themes/Portfolio/*.css.map
-
 !.gitignore
+
+!/wp-content/
+/wp-content/*
+!/wp-content/themes/
+/wp-content/themes/*
+!/wp-content/themes/Portfolio/
