@@ -210,7 +210,7 @@
   margin: auto;
   display: flex;
   flex-direction: column;
-  background-image: url(./assets/images/about/about-main-visual.jpg);
+  background-image: url(./assets/images/About/about-main-visual.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -320,7 +320,7 @@
   margin: auto;
   display: flex;
   flex-direction: column;
-  background-image: url(./assets/images/about/about-main-visual.jpg);
+  background-image: url(./assets/images/About/about-main-visual.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
