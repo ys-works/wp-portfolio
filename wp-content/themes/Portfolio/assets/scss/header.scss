@@ -61,7 +61,7 @@ nav ul li {
   height: 64px;
   background-image: var(
     --apng-url,
-    url("./assets/images/header/cat3_h1.apng")
+    url("../images/header/cat3_h1.apng")
   );
   background-size: contain;
   background-repeat: no-repeat;
@@ -169,34 +169,34 @@ nav ul {
 
 /* ▼ 個別（通常） */
 .nav-product::before {
-  background-image: url("./assets/images/header/cat_turn.svg");
+  background-image: url("../images/header/cat_turn.svg");
 }
 
 .nav-about::before {
-  background-image: url("./assets/images/header/cat.svg");
+  background-image: url("../images/header/cat.svg");
 }
 
 .nav-news::before {
-  background-image: url("./assets/images/header/cat_run.svg");
+  background-image: url("../images/header/cat_run.svg");
 }
 
 .nav-contact::before {
-  background-image: url("./assets/images/header/cat_walk.svg");
+  background-image: url("../images/header/cat_walk.svg");
 }
 
 /* ▼ 個別（hover） */
 .nav-news:hover::before {
-  background-image: url("./assets/images/header/cat_run.apng");
+  background-image: url("../images/header/cat_run.apng");
 }
 
 .nav-product:hover::before {
-  background-image: url("./assets/images/header/cat_turn.apng");
+  background-image: url("../images/header/cat_turn.apng");
 }
 
 .nav-about:hover::before {
-  background-image: url("./assets/images/header/cat_jump.apng");
+  background-image: url("../images/header/cat_jump.apng");
 }
 
 .nav-contact:hover::before {
-  background-image: url("./assets/images/header/cat_walk.apng");
+  background-image: url("../images/header/cat_walk.apng");
 }

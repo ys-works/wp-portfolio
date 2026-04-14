@@ -18,7 +18,7 @@
   margin: auto;
   display: flex;
   flex-direction: column;
-  background-image: url(./assets/images/product/product_visual.jpg);
+  background-image: url(../images/product/product_visual.jpg);
   background-size: cover;
   background-position: center 45%;
   background-repeat: no-repeat;
@@ -64,7 +64,7 @@
 .page-template-page-product .product-wrap h2 {
   font-size: 1.5rem;
   font-weight: bold;
-  background: url(./assets/images/icon/icon_niku.svg) no-repeat left center;
+  background: url(../images/icon/icon_niku.svg) no-repeat left center;
   background-size: 32px 32px;
   padding-left: 36px;
   margin-bottom: 40px;
@@ -129,7 +129,7 @@
   margin: auto;
   display: flex;
   flex-direction: column;
-  background-image: url(./assets/images/product/main-visual.jpg);
+  background-image: url(../images/product/main-visual.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -210,7 +210,7 @@
   margin: auto;
   display: flex;
   flex-direction: column;
-  background-image: url(./assets/images/About/about-main-visual.jpg);
+  background-image: url(../images/About/about-main-visual.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -320,7 +320,7 @@
   margin: auto;
   display: flex;
   flex-direction: column;
-  background-image: url(./assets/images/About/about-main-visual.jpg);
+  background-image: url(../images/About/about-main-visual.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
