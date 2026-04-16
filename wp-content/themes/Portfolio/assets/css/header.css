@@ -154,7 +154,7 @@ nav ul {
 
 .nav-contact::before {
   content: "";
-  width: 80px;
+  width: 90px;
   height: 64px;
   display: inline-block;
   background-size: contain;
@@ -176,6 +176,7 @@ nav ul {
 
 .nav-contact::before {
   background-image: url("../images/header/cat_walk.svg");
+  background-position-x: 18px;
 }
 
 /* ▼ 個別（hover） */
@@ -193,4 +194,6 @@ nav ul {
 
 .nav-contact:hover::before {
   background-image: url("../images/header/cat_walk.apng");
+  background-size: cover;
+  background-position-x: 0;
 }/*# sourceMappingURL=header.css.map */

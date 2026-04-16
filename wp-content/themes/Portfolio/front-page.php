@@ -81,7 +81,7 @@
             wp_reset_postdata();
           endif; ?>
         </div>
-        <div class="section-link js-fade-up+-first">
+        <div class="section-link js-fade-up-first">
           <a href="/news">ニュース一覧</a>
         </div>
       </div>
