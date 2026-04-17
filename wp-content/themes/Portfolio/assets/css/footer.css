@@ -25,7 +25,7 @@ footer {
 }
 
 .footer-links ul li:not(:first-child) {
-  padding: 10px 0 0 18px;
+  padding: 10px 0 0 20px;
 }
 
 .footer-links ul li a {
@@ -76,9 +76,16 @@ footer {
   justify-content: space-between;
 }
 
-.footer-logo {
+.footer-logo a {
   font-size: 24px;
   font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-container-bottom ul li a {
+  color: #fff;
+  text-decoration: none;
 }
 
 .copyright {

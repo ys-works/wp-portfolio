@@ -176,7 +176,7 @@ nav ul {
 
 .nav-contact::before {
   background-image: url("../images/header/cat_walk.svg");
-  background-position-x: 18px;
+  background-position-x: 14px;
 }
 
 /* ▼ 個別（hover） */

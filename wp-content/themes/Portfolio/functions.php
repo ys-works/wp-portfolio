@@ -100,26 +100,71 @@ function custom_news_type_title($title)
   return $title;
 }
 
-function register_product_taxonomy() {
-    $labels = array(
-        'name'              => 'カテゴリー',
-        'singular_name'     => 'カテゴリー',
-        'search_items'      => 'カテゴリーを検索',
-        'all_items'         => 'すべてのカテゴリー',
-        'edit_item'         => 'カテゴリーを編集',
-        'add_new_item'      => 'カテゴリーを追加',
-        'menu_name'         => 'カテゴリー',
-    );
+function register_product_taxonomy()
+{
+  $labels = array(
+    'name'              => 'カテゴリー',
+    'singular_name'     => 'カテゴリー',
+    'search_items'      => 'カテゴリーを検索',
+    'all_items'         => 'すべてのカテゴリー',
+    'edit_item'         => 'カテゴリーを編集',
+    'add_new_item'      => 'カテゴリーを追加',
+    'menu_name'         => 'カテゴリー',
+  );
 
-    $args = array(
-        'labels'            => $labels,
-        'hierarchical'      => true,
-        'public'            => true,
-        'show_ui'           => true,
-        'show_admin_column' => true,
-        'show_in_nav_menus' => true,
-    );
+  $args = array(
+    'labels'            => $labels,
+    'hierarchical'      => true,
+    'public'            => true,
+    'show_ui'           => true,
+    'show_admin_column' => true,
+    'show_in_nav_menus' => true,
+  );
 
-    register_taxonomy('product_cat', array('page'), $args);
+  register_taxonomy('product_cat', array('page'), $args);
 }
 add_action('init', 'register_product_taxonomy');
+
+function footer_nav_links($slug)
+{
+  $parent = get_page_by_path($slug);
+  if (! $parent) return;
+
+  $children = get_pages([
+    'parent'      => $parent->ID,
+    'sort_column' => 'menu_order',
+    'sort_order'  => 'ASC',
+  ]);
+?>
+  <ul>
+    <li><a href="<?php echo get_permalink($parent->ID); ?>"><?php echo esc_html(get_the_title($parent->ID)); ?></a></li>
+    <?php foreach ($children as $child) : ?>
+      <li><a href="<?php echo get_permalink($child->ID); ?>"><?php echo esc_html(get_the_title($child->ID)); ?></a></li>
+    <?php endforeach; ?>
+  </ul>
+<?php
+}
+
+function footer_nav_news()
+{
+  $terms = get_terms([
+    'taxonomy'   => 'news_category',
+    'hide_empty' => false,
+    'orderby'    => 'term_order',
+    'parent'     => 0,
+  ]);
+?>
+  <ul>
+    <li><a href="<?php echo get_post_type_archive_link('news'); ?>">News</a></li>
+    <?php if (! empty($terms) && ! is_wp_error($terms)) : ?>
+      <?php foreach ($terms as $term) : ?>
+        <li>
+          <a href="<?php echo get_term_link($term); ?>"><?php echo esc_html($term->name); ?></a>
+        </li>
+      <?php endforeach; ?>
+    <?php endif; ?>
+  </ul>
+<?php
+}
+
+?>
