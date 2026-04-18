@@ -1,3 +1,4 @@
+@use "responsive" as *;
 // ============================================================
 // header
 // ============================================================
@@ -14,16 +15,18 @@ header {
 
 .header-wrap {
   display: grid;
-  grid-template-columns: auto 1fr; /* ロゴは中身分、残りをナビが占有 */
+  grid-template-columns: auto 1fr;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
+  @include mq($bp-xl) {
+    padding: 0 20px;
+  }
 }
 
 .header-wrap > :first-child {
   margin-right: auto;
-  flex-shrink: 0;
 }
 
 header a:hover {
@@ -39,6 +42,8 @@ header nav,
 header nav ul,
 nav ul li {
   height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .header-wrap .logo a {
@@ -59,10 +64,7 @@ nav ul li {
   z-index: -1;
   width: 100px;
   height: 64px;
-  background-image: var(
-    --apng-url,
-    url("../images/header/cat3_h1.apng")
-  );
+  background-image: var(--apng-url, url("../images/header/cat3_h1.apng"));
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 0;
@@ -147,6 +149,10 @@ nav ul {
   display: inline-block;
   background-size: contain;
   background-repeat: no-repeat;
+  @include mq($bp-xl) {
+    width: 100px;
+    background-position: center;
+  }
 }
 
 .nav-about::before {
@@ -156,15 +162,23 @@ nav ul {
   display: inline-block;
   background-size: contain;
   background-repeat: no-repeat;
+  @include mq($bp-xl) {
+    width: 100px;
+    background-position: center;
+  }
 }
 
 .nav-contact::before {
   content: "";
-  width: 90px;
+  width: 80px;
   height: 64px;
   display: inline-block;
-  background-size: contain;
+  background-position: center;
   background-repeat: no-repeat;
+  @include mq($bp-xl) {
+    padding-right: 20px;
+    background-position: center;
+  }
 }
 
 /* ▼ 個別（通常） */
@@ -182,8 +196,7 @@ nav ul {
 
 .nav-contact::before {
   background-image: url("../images/header/cat_walk.svg");
-  background-position-x: 14px;
-  }
+}
 
 /* ▼ 個別（hover） */
 .nav-news:hover::before {

@@ -52,6 +52,14 @@ function mytheme_enqueue_scripts()
     null,
     true
   );
+
+    wp_enqueue_script(
+    'hamburger',
+    get_template_directory_uri() . '/assets/js/hamburger.js',
+    array(),
+    null,
+    true
+  );
 }
 add_action('wp_enqueue_scripts', 'mytheme_enqueue_scripts');
 

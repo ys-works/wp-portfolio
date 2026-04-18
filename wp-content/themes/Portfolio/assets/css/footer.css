@@ -1,4 +1,3 @@
-@charset "UTF-8";
 footer {
   height: 30vh;
   color: #fff;
@@ -6,10 +5,15 @@ footer {
 }
 
 .footer-wrap {
-  width: 1200px;
+  max-width: 1200px;
+  width: 100%;
   height: 100%;
   margin: 0 auto;
-  position: relative;
+}
+@media (max-width: 1200px) {
+  .footer-wrap {
+    padding: 0 20px;
+  }
 }
 
 .footer-links {
@@ -34,7 +38,7 @@ footer {
 }
 
 .footer-links ul li a:hover {
-  color: #EAEAA7;
+  color: #eaeaa7;
   text-decoration: underline;
 }
 
@@ -51,28 +55,23 @@ footer {
 }
 
 .footer-links ul li:first-child a:hover::before {
-  color: #EAEAA7;
+  color: #eaeaa7;
 }
 
 .external-link::after {
-  /* Sharp Solid用の指定 */
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
   content: "\f35d";
-  /* 調整（必要に応じて） */
   margin-left: 5px;
   font-size: 0.9em;
   color: #fff;
 }
 
 .footer-container-bottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
   width: 100%;
-  height: 30%;
+  height: 45%;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
 }
 
@@ -89,7 +88,6 @@ footer {
 }
 
 .copyright {
-  position: absolute;
-  bottom: 0;
   font-size: 12px;
+  text-align: center;
 }/*# sourceMappingURL=footer.css.map */

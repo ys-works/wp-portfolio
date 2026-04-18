@@ -11,16 +11,20 @@ header {
 
 .header-wrap {
   display: grid;
-  grid-template-columns: auto 1fr; /* ロゴは中身分、残りをナビが占有 */
+  grid-template-columns: auto 1fr;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
 }
+@media (max-width: 1200px) {
+  .header-wrap {
+    padding: 0 20px;
+  }
+}
 
 .header-wrap > :first-child {
   margin-right: auto;
-  flex-shrink: 0;
 }
 
 header a:hover {
@@ -36,6 +40,8 @@ header nav,
 header nav ul,
 nav ul li {
   height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .header-wrap .logo a {
@@ -142,6 +148,12 @@ nav ul {
   background-size: contain;
   background-repeat: no-repeat;
 }
+@media (max-width: 1200px) {
+  .nav-product::before {
+    width: 100px;
+    background-position: center;
+  }
+}
 
 .nav-about::before {
   content: "";
@@ -151,14 +163,26 @@ nav ul {
   background-size: contain;
   background-repeat: no-repeat;
 }
+@media (max-width: 1200px) {
+  .nav-about::before {
+    width: 100px;
+    background-position: center;
+  }
+}
 
 .nav-contact::before {
   content: "";
-  width: 90px;
+  width: 80px;
   height: 64px;
   display: inline-block;
-  background-size: contain;
+  background-position: center;
   background-repeat: no-repeat;
+}
+@media (max-width: 1200px) {
+  .nav-contact::before {
+    padding-right: 20px;
+    background-position: center;
+  }
 }
 
 /* ▼ 個別（通常） */
@@ -176,7 +200,6 @@ nav ul {
 
 .nav-contact::before {
   background-image: url("../images/header/cat_walk.svg");
-  background-position-x: 14px;
 }
 
 /* ▼ 個別（hover） */

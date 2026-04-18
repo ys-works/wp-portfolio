@@ -178,47 +178,56 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // サイドバー用ドロワーメニュー
 function updatePrefix(btn) {
-  const expanded = btn.getAttribute('aria-expanded') === 'true';
-  btn.firstChild.textContent = expanded ? '- ' : '+ ';
+  const expanded = btn.getAttribute("aria-expanded") === "true";
+  btn.firstChild.textContent = expanded ? "- " : "+ ";
 }
 
-document.querySelectorAll('.sidebar-toggle__list').forEach(list => {
-  list.style.overflow = 'hidden';
+document.querySelectorAll(".sidebar-toggle__list").forEach((list) => {
+  list.style.overflow = "hidden";
   const btn = document.querySelector(`[aria-controls="${list.id}"]`);
-  const expanded = btn.getAttribute('aria-expanded') === 'true';
-  list.style.height = expanded ? list.scrollHeight + 'px' : '0px';
-  btn.insertBefore(document.createTextNode(expanded ? '- ' : '+ '), btn.firstChild);
+  const expanded = btn.getAttribute("aria-expanded") === "true";
+  list.style.height = expanded ? list.scrollHeight + "px" : "0px";
+  btn.insertBefore(
+    document.createTextNode(expanded ? "- " : "+ "),
+    btn.firstChild,
+  );
 });
 
 function closeToggle(btn) {
-  const list = document.getElementById(btn.getAttribute('aria-controls'));
-  btn.setAttribute('aria-expanded', 'false');
+  const list = document.getElementById(btn.getAttribute("aria-controls"));
+  btn.setAttribute("aria-expanded", "false");
   updatePrefix(btn);
-  list.animate(
-    [{ height: list.scrollHeight + 'px' }, { height: '0px' }],
-    { duration: 300, easing: 'ease', fill: 'forwards' }
-  ).finished.then(() => {
-    list.style.height = '0px';
-  });
+  list
+    .animate([{ height: list.scrollHeight + "px" }, { height: "0px" }], {
+      duration: 300,
+      easing: "ease",
+      fill: "forwards",
+    })
+    .finished.then(() => {
+      list.style.height = "0px";
+    });
 }
 
 function openToggle(btn) {
-  const list = document.getElementById(btn.getAttribute('aria-controls'));
-  btn.setAttribute('aria-expanded', 'true');
+  const list = document.getElementById(btn.getAttribute("aria-controls"));
+  btn.setAttribute("aria-expanded", "true");
   updatePrefix(btn);
-  list.animate(
-    [{ height: '0px' }, { height: list.scrollHeight + 'px' }],
-    { duration: 300, easing: 'ease', fill: 'forwards' }
-  ).finished.then(() => {
-    list.style.height = list.scrollHeight + 'px';
-  });
+  list
+    .animate([{ height: "0px" }, { height: list.scrollHeight + "px" }], {
+      duration: 300,
+      easing: "ease",
+      fill: "forwards",
+    })
+    .finished.then(() => {
+      list.style.height = list.scrollHeight + "px";
+    });
 }
 
-document.querySelectorAll('.sidebar-toggle__btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const expanded = btn.getAttribute('aria-expanded') === 'true';
+document.querySelectorAll(".sidebar-toggle__btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const expanded = btn.getAttribute("aria-expanded") === "true";
 
-    document.querySelectorAll('.sidebar-toggle__btn').forEach(other => {
+    document.querySelectorAll(".sidebar-toggle__btn").forEach((other) => {
       if (other === btn) return;
       closeToggle(other);
     });

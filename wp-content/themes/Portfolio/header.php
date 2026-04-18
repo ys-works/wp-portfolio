@@ -24,12 +24,17 @@
     <div class="header-wrap">
       <div class="logo"><a href="<?php bloginfo('url'); ?>">Portforio</a></div>
       <nav>
-        <ul>
+        <ul id="nav-list">
           <li><a href="/product/" class="nav-link nav-product"><span>Product</span></a></li>
           <li><a href="/about/" class="nav-link nav-about"><span>About</span></a></li>
           <li><a href="/news/" class="nav-link nav-news"><span>News</span></a></li>
           <li><a href="/inquiry/" class="nav-link nav-contact"><span>Contact</span></a></li>
         </ul>
+        <div id="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
       </nav>
     </div>
   </header>

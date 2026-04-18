@@ -6,6 +6,11 @@
   width: 100%;
   z-index: 1;
 }
+@media (max-width: 1200px) {
+  .page-template-page-product .breadcrumb {
+    padding: 20px;
+  }
+}
 
 .page-template-page-product .breadcrumb a {
   color: #fff;
@@ -49,6 +54,11 @@
   justify-content: center;
   align-items: flex-start;
 }
+@media (max-width: 1200px) {
+  .page-template-page-product .main-visual-inner {
+    padding: 20px;
+  }
+}
 
 .page-template-page-product .main-visual-inner h1 {
   margin: 0;
@@ -59,6 +69,11 @@
   max-width: 1200px;
   margin: 40px auto;
   width: 100%;
+}
+@media (max-width: 1200px) {
+  .page-template-page-product .product-wrap {
+    padding: 20px;
+  }
 }
 
 .page-template-page-product .product-wrap h2 {
@@ -117,6 +132,11 @@
   width: 100%;
   z-index: 1;
 }
+@media (max-width: 1200px) {
+  .page-template-page-product-detail .breadcrumb {
+    padding: 20px;
+  }
+}
 
 .page-template-page-product-detail .breadcrumb a {
   color: #fff;
@@ -131,7 +151,7 @@
   flex-direction: column;
   background-image: url(../images/product/main-visual.jpg);
   background-size: cover;
-  background-position: center center;
+  background-position: center 65%;
   background-repeat: no-repeat;
   z-index: 1;
 }
@@ -144,6 +164,11 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+@media (max-width: 1200px) {
+  .page-template-page-product-detail .main-visual-inner {
+    padding: 20px;
+  }
 }
 
 .page-template-page-product-detail .main-visual::before {
@@ -185,6 +210,11 @@
   gap: 40px;
   width: 100%;
 }
+@media (max-width: 1200px) {
+  .product-detail {
+    padding: 20px;
+  }
+}
 
 .product-detail figure {
   margin-bottom: 40px;
@@ -215,6 +245,11 @@
   background-position: center center;
   background-repeat: no-repeat;
   z-index: 1;
+}
+@media (max-width: 1200px) {
+  .page-template-page-about .main-visual {
+    padding: 20px;
+  }
 }
 
 .page-template-page-about .main-visual::before {
@@ -260,6 +295,24 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   width: 100%;
+}
+@media (max-width: 1200px) {
+  .page-template-page-about .about-inner {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 768px) {
+  .page-template-page-about .about-inner {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 80px auto;
+    padding: 0 20px;
+  }
+}
+@media (max-width: 480px) {
+  .page-template-page-about .about-inner {
+    grid-template-columns: 1fr;
+    margin: 60px auto;
+  }
 }
 
 .page-template-page-about .about-item {
