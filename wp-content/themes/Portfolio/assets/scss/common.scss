@@ -125,12 +125,17 @@ body {
   color: #333;
   background-color: #fff;
   width: 100%;
+  overflow-x: hidden;
 }
 
 header,
 main,
 footer {
   width: 100%;
+}
+
+main {
+  margin-top: 70px;
 }
 
 section {
@@ -187,6 +192,9 @@ a:visited {
   left: 0;
   z-index: 2;
   color: #fff;
+  @include mq($bp-xl) {
+    left: 20px;
+  }
 }
 
 .hero .hero-inner::after {
@@ -194,7 +202,6 @@ a:visited {
   position: absolute;
   inset: 0;
   pointer-events: none;
-
   background: linear-gradient(
     to right,
     rgba(0, 0, 0, 0.8) 0%,
@@ -245,12 +252,18 @@ a:visited {
 
 .product .section-inner-left h2 img {
   height: 45px;
+  @include mq($bp-sm) {
+    height: 35px;
+  }
 }
 
 .product .section-inner-left p {
   width: 80%;
   margin: 24px 0 0 7%;
   font-size: 18px;
+  @include mq($bp-sm) {
+    font-size: 1rem;
+  }
 }
 
 .product .section-inner-left a {
@@ -331,12 +344,18 @@ a:visited {
 
 .about .section-inner-right h2 img {
   height: 45px;
+  @include mq($bp-sm) {
+    height: 35px;
+  }
 }
 
 .about .section-inner-right p {
   width: 80%;
   margin: 24px 0 0 7%;
   font-size: 18px;
+  @include mq($bp-sm) {
+    font-size: 1rem;
+  }
 }
 
 .about .section-inner-right a {
@@ -379,7 +398,7 @@ a:visited {
 
 /* news */
 .news {
-  height: 60vh;
+  height: 100%;
   margin-bottom: 60px;
   padding: 5% 10% 5%;
 }
@@ -415,6 +434,12 @@ a:visited {
 .news-date {
   color: #888;
   font-size: 1.2rem;
+  @include mq($bp-md) {
+    font-size: 1rem;
+  }
+  @include mq($bp-sm) {
+    font-size: 0.8rem;
+  }
 }
 
 .news-title {
@@ -431,6 +456,9 @@ a:visited {
   flex-wrap: nowrap;
   gap: 8px;
   overflow: hidden;
+  @include mq($bp-sm) {
+    display: none;
+  }
 }
 
 .cat-label {
@@ -459,6 +487,12 @@ a:visited {
   &:visited {
     font-size: 1.2rem;
     color: #c2791a;
+  }
+  @include mq($bp-md) {
+    font-size: 1rem;
+  }
+  @include mq($bp-sm) {
+    font-size: 0.8rem;
   }
 }
 
@@ -505,12 +539,15 @@ a:visited {
 .scroll-controls {
   font-size: 12px;
   position: fixed;
-  bottom: 10px;
+  bottom: 60px;
   right: 20px;
   display: flex;
   flex-direction: column;
   gap: 5px;
   z-index: 9999;
+  @include mq($bp-sm) {
+    display: none;
+  }
 }
 
 .nav-btn {

@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 <main>
   <div class="scroll-controls">
-  <button id="btn-up" class="nav-btn">PageUp</button>
-  <button id="btn-down" class="nav-btn">PageDown</button>
-</div>
+    <button id="btn-up" class="nav-btn">PageUp</button>
+    <button id="btn-down" class="nav-btn">PageDown</button>
+  </div>
   <div class="hero">
     <div class="hero-inner">
       <div class="title">

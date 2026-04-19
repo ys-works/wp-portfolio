@@ -4,9 +4,13 @@
 // ============================================================
 
 footer {
-  height: 30vh;
+  min-height: 30dvh;
   color: #fff;
   background: rgb(80, 80, 80);
+  @include mq($bp-md) {
+    font-size: 0.8rem;
+    padding-bottom: 20px;
+  }
 }
 
 .footer-wrap {
@@ -76,6 +80,10 @@ footer {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+  @include mq($bp-md) {
+    padding-top: 20px;
+    align-items: center;
+  }
 }
 
 .footer-logo a {

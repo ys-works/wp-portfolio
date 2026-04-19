@@ -110,12 +110,17 @@ body {
   color: #333;
   background-color: #fff;
   width: 100%;
+  overflow-x: hidden;
 }
 
 header,
 main,
 footer {
   width: 100%;
+}
+
+main {
+  margin-top: 70px;
 }
 
 section {
@@ -168,6 +173,11 @@ a:visited {
   left: 0;
   z-index: 2;
   color: #fff;
+}
+@media (max-width: 1200px) {
+  .hero .hero-inner .title h1 {
+    left: 20px;
+  }
 }
 
 .hero .hero-inner::after {
@@ -222,11 +232,21 @@ a:visited {
 .product .section-inner-left h2 img {
   height: 45px;
 }
+@media (max-width: 480px) {
+  .product .section-inner-left h2 img {
+    height: 35px;
+  }
+}
 
 .product .section-inner-left p {
   width: 80%;
   margin: 24px 0 0 7%;
   font-size: 18px;
+}
+@media (max-width: 480px) {
+  .product .section-inner-left p {
+    font-size: 1rem;
+  }
 }
 
 .product .section-inner-left a {
@@ -311,11 +331,21 @@ a:visited {
 .about .section-inner-right h2 img {
   height: 45px;
 }
+@media (max-width: 480px) {
+  .about .section-inner-right h2 img {
+    height: 35px;
+  }
+}
 
 .about .section-inner-right p {
   width: 80%;
   margin: 24px 0 0 7%;
   font-size: 18px;
+}
+@media (max-width: 480px) {
+  .about .section-inner-right p {
+    font-size: 1rem;
+  }
 }
 
 .about .section-inner-right a {
@@ -360,7 +390,7 @@ a:visited {
 
 /* news */
 .news {
-  height: 60vh;
+  height: 100%;
   margin-bottom: 60px;
   padding: 5% 10% 5%;
 }
@@ -399,6 +429,16 @@ a:visited {
   color: #888;
   font-size: 1.2rem;
 }
+@media (max-width: 768px) {
+  .news-date {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .news-date {
+    font-size: 0.8rem;
+  }
+}
 
 .news-title {
   font-size: 1.2rem;
@@ -414,6 +454,11 @@ a:visited {
   flex-wrap: nowrap;
   gap: 8px;
   overflow: hidden;
+}
+@media (max-width: 480px) {
+  .news-cat {
+    display: none;
+  }
 }
 
 .cat-label {
@@ -443,6 +488,16 @@ a:visited {
 .news .section-inner a:visited {
   font-size: 1.2rem;
   color: #c2791a;
+}
+@media (max-width: 768px) {
+  .news .section-inner a {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .news .section-inner a {
+    font-size: 0.8rem;
+  }
 }
 
 .news .section-link a::before {
@@ -481,12 +536,17 @@ a:visited {
 .scroll-controls {
   font-size: 12px;
   position: fixed;
-  bottom: 10px;
+  bottom: 60px;
   right: 20px;
   display: flex;
   flex-direction: column;
   gap: 5px;
   z-index: 9999;
+}
+@media (max-width: 480px) {
+  .scroll-controls {
+    display: none;
+  }
 }
 
 .nav-btn {
