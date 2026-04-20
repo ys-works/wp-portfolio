@@ -35,7 +35,7 @@
     </div>
     <div class="footer-container-bottom">
       <div class="footer-logo">
-        <a href="<?php bloginfo('url'); ?>">Portforio</a>
+        <a href="<?php bloginfo('url'); ?>">Portfolio</a>
       </div>
       <ul>
         <li><a href="<?php echo get_permalink(get_page_by_path('privacy-policy')->ID); ?>">Privacy Policy</a></li>

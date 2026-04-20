@@ -98,6 +98,11 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
+@media (max-width: 768px) {
+  .page-template-page-product .product-grid {
+    grid-template-columns: repeat(2, 2fr);
+  }
+}
 
 .page-template-page-product .product-item {
   border: 1px solid #ccc;
@@ -214,6 +219,15 @@
   .product-detail {
     padding: 20px;
   }
+}
+@media (max-width: 768px) {
+  .product-detail {
+    display: block;
+  }
+}
+
+.product-detail .product-content {
+  margin-bottom: 40px;
 }
 
 .product-detail figure {
@@ -372,6 +386,12 @@
   width: 100%;
   z-index: 1;
 }
+@media (max-width: 1024px) {
+  .page-template-default .breadcrumb,
+  .page-template-page-about-detail .breadcrumb {
+    padding: 10px 20px 0;
+  }
+}
 
 .page-template-default .breadcrumb a,
 .page-template-page-about-detail .breadcrumb a {
@@ -419,6 +439,12 @@
   justify-content: center;
   align-items: flex-start;
 }
+@media (max-width: 1024px) {
+  .page-template-default .main-visual .main-visual-inner,
+  .page-template-page-about-detail .main-visual-inner {
+    padding: 0 20px;
+  }
+}
 
 .page-template-default .main-visual .main-visual-inner h1,
 .page-template-page-about-detail .main-visual-inner h1 {
@@ -435,9 +461,24 @@
   gap: 40px;
   width: 100%;
 }
+@media (max-width: 1024px) {
+  .page-template-page-about-detail .about-detail-wrap {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 768px) {
+  .page-template-page-about-detail .about-detail-wrap {
+    display: block;
+  }
+}
 
 .page-template-page-about-detail .about-detail {
   height: 100%;
+}
+@media (max-width: 768px) {
+  .page-template-page-about-detail .about-detail {
+    margin-bottom: 40px;
+  }
 }
 
 .page-template-page-about-detail .about-detail-content .wp-block-columns {

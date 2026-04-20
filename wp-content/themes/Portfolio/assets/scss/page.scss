@@ -111,6 +111,9 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+  @include mq($bp-md) {
+    grid-template-columns: repeat(2, 2fr);
+  }
 }
 
 .page-template-page-product .product-item {
@@ -231,6 +234,13 @@
   @include mq($bp-xl) {
     padding: 20px;
   }
+  @include mq($bp-md) {
+    display: block;
+  }
+}
+
+.product-detail .product-content {
+  margin-bottom: 40px;
 }
 
 .product-detail figure {
@@ -397,6 +407,9 @@
   text-align: left;
   width: 100%;
   z-index: 1;
+  @include mq($bp-lg) {
+    padding: 10px 20px 0;
+  }
 }
 .page-template-default .breadcrumb a,
 .page-template-page-about-detail .breadcrumb a {
@@ -447,6 +460,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  @include mq($bp-lg) {
+    padding: 0 20px;
+  }
 }
 
 .page-template-default .main-visual .main-visual-inner h1,
@@ -463,10 +479,19 @@
   align-items: flex-start;
   gap: 40px;
   width: 100%;
+  @include mq($bp-lg) {
+    padding: 0 20px;
+  }
+  @include mq($bp-md) {
+    display: block;
+  }
 }
 
 .page-template-page-about-detail .about-detail {
   height: 100%;
+  @include mq($bp-md){
+    margin-bottom: 40px;
+  }
 }
 
 // ご挨拶

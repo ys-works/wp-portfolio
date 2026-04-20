@@ -22,7 +22,7 @@
       ?>">
   <header>
     <div class="header-wrap">
-      <div class="logo"><a href="<?php bloginfo('url'); ?>">Portforio</a></div>
+      <div class="logo"><a href="<?php bloginfo('url'); ?>">Portfolio</a></div>
       <nav>
         <ul id="nav-list">
           <li><a href="/product/" class="nav-link nav-product"><span>Product</span></a></li>

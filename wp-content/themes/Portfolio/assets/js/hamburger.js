@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
     display: "flex",
     flexDirection: "column",
     position: "fixed",
-    top: "64px",
+    top: "70px",
     right: "0",
     width: "250px",
     height: "calc(100vh - 64px)",

@@ -7,7 +7,7 @@
   <div class="hero">
     <div class="hero-inner">
       <div class="title">
-        <h1>Protforio</h1>
+        <h1>Protfolio</h1>
       </div>
       <video autoplay loop muted playsinline>
         <source src="<?php echo get_template_directory_uri(); ?>/assets/images/movie/top_hero.webm" type="video/webm">

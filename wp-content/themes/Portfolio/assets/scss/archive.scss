@@ -13,6 +13,14 @@
   width: 100%;
   align-content: flex-start;
   align-items: flex-start;
+  @include mq($bp-xl) {
+    padding: 0 20px;
+  }
+  @include mq($bp-md) {
+    display: block;
+    height: 100%;
+    margin-bottom: 40px;
+  }
 }
 
 .archive .title {
@@ -20,12 +28,15 @@
 }
 
 .archive .title h1 {
-  margin: 20px 0 0;
+  margin: 20px 0;
 }
 
 .archive .news-list {
   flex: 3;
   min-width: 0;
+  @include mq($bp-md) {
+    margin-bottom: 40px;
+  }
 }
 
 .archive .news-list article {
@@ -40,6 +51,15 @@
 .archive .news-list article .news-date {
   color: #888;
   font-size: 1rem;
+  @include mq($bp-md) {
+    font-size: 0.8rem;
+  }
+}
+
+.archive .news-list article .news-title {
+  @include mq($bp-md) {
+    font-size: 0.8rem;
+  }
 }
 
 .archive .pagination {

@@ -387,6 +387,12 @@ a:visited {
   -o-object-position: 5% center;
      object-position: 5% center;
 }
+@media (max-width: 768px) {
+  .about .section-inner-left img {
+    -o-object-position: 20% center;
+       object-position: 20% center;
+  }
+}
 
 /* news */
 .news {
@@ -515,6 +521,11 @@ a:visited {
 .breadcrumb {
   padding: 10px 0 0;
   font-size: 0.8rem;
+}
+@media (max-width: 1024px) {
+  .breadcrumb {
+    padding: 10px 20px 0;
+  }
 }
 
 .breadcrumb-inner {
