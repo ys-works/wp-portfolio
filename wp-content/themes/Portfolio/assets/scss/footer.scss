@@ -7,6 +7,8 @@ footer {
   min-height: 30dvh;
   color: #fff;
   background: rgb(80, 80, 80);
+  display: flex;
+  flex-direction: column;
   @include mq($bp-md) {
     font-size: 0.8rem;
     padding-bottom: 20px;
@@ -16,8 +18,10 @@ footer {
 .footer-wrap {
   max-width: 1200px;
   width: 100%;
-  height: 100%;
   margin: 0 auto;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   @include mq($bp-xl) {
     padding: 0 20px;
   }
@@ -28,7 +32,6 @@ footer {
   display: flex;
   justify-content: space-between;
   gap: 24px;
-  height: 50%;
 }
 
 .footer-links ul li:first-child {
@@ -76,7 +79,7 @@ footer {
 
 .footer-container-bottom {
   width: 100%;
-  height: 45%;
+  margin-top: auto;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;

@@ -2,9 +2,6 @@
   <div class="footer-wrap">
     <div class="footer-container-up">
       <div class="footer-links">
-
-        <!-- Product：子ページなしなのでシンプルに直書き -->
-        <!-- Product -->
         <?php
         $product_page = get_page_by_path('product');
         if ($product_page) : ?>
@@ -12,14 +9,8 @@
             <li><a href="<?php echo get_permalink($product_page->ID); ?>">Product</a></li>
           </ul>
         <?php endif; ?>
-
-        <!-- About：親＋子ページ動的出力 -->
         <?php footer_nav_links('about'); ?>
-
-        <!-- News：アーカイブ＋カテゴリ動的出力 -->
         <?php footer_nav_news(); ?>
-
-        <!-- Contact＋外部リンク -->
         <ul>
           <ul>
             <?php $contact_page = get_page_by_path('inquiry'); ?>
@@ -41,7 +32,9 @@
         <li><a href="<?php echo get_permalink(get_page_by_path('privacy-policy')->ID); ?>">Privacy Policy</a></li>
       </ul>
     </div>
-    <p class="copyright">&copy; 2026 Portforio. All rights reserved.</p>
+    <div class="copy-wrap">
+      <p class="copyright">&copy; 2026 Portforio. All rights reserved.</p>
+    </div>
   </div>
   <?php wp_footer(); ?>
 </footer>
