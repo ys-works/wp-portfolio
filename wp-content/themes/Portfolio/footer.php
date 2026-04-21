@@ -12,16 +12,14 @@
         <?php footer_nav_links('about'); ?>
         <?php footer_nav_news(); ?>
         <ul>
-          <ul>
-            <?php $contact_page = get_page_by_path('inquiry'); ?>
-            <?php if ($contact_page) : ?>
-              <li><a href="<?php echo get_permalink($contact_page->ID); ?>">Contact</a></li>
-            <?php endif; ?>
-            <li class="external-link">
-              <a href="https://ys-works-portforio-next.vercel.app/" target="_blank" rel="noopener noreferrer">花粉情報</a>
-            </li>
-          </ul>
-
+          <?php $contact_page = get_page_by_path('inquiry'); ?>
+          <?php if ($contact_page) : ?>
+            <li><a href="<?php echo get_permalink($contact_page->ID); ?>">Contact</a></li>
+          <?php endif; ?>
+          <li class="external-link">
+            <a href="https://ys-works-portforio-next.vercel.app/" target="_blank" rel="noopener noreferrer">花粉情報</a>
+          </li>
+        </ul>
       </div>
     </div>
     <div class="footer-container-bottom">
@@ -39,5 +37,4 @@
   <?php wp_footer(); ?>
 </footer>
 </body>
-
 </html>
