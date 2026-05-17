@@ -29,6 +29,7 @@ function my_theme_enqueue_styles()
   wp_enqueue_style('my-theme-footer',      $dir_uri . 'footer.css',      ['my-theme-common'], $get_ver('footer.css'));
   wp_enqueue_style('my-theme-archive',     $dir_uri . 'archive.css',     ['my-theme-common'], $get_ver('archive.css'));
   wp_enqueue_style('my-theme-article',     $dir_uri . 'article.css',     ['my-theme-common'], $get_ver('article.css'));
+  wp_enqueue_style('my-theme-single-news', $dir_uri . 'single-news.css', ['my-theme-common'], $get_ver('single-news.css'));
   wp_enqueue_style('my-theme-custom-post', $dir_uri . 'custom-post.css', ['my-theme-common'], $get_ver('custom-post.css'));
   wp_enqueue_style('my-theme-page',        $dir_uri . 'page.css',        ['my-theme-common'], $get_ver('page.css'));
   wp_enqueue_style('my-theme-responsive',  $dir_uri . 'responsive.css',  ['my-theme-header', 'my-theme-footer', 'my-theme-article', 'my-theme-page'], $get_ver('responsive.css'));

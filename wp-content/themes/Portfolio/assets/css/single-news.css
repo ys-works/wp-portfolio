@@ -1,0 +1,23 @@
+.single-news .content-single {
+  height: calc(70dvh - 70px);
+  width: 1200px;
+  margin: auto;
+}
+
+.single-news .article-body {
+  margin-bottom: 40px;
+}
+
+.single-news h1 {
+  margin: 20px 0;
+}
+
+.single-news .meta {
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+}
+@media (max-width: 480px) {
+  .single-news .meta {
+    display: none;
+  }
+}/*# sourceMappingURL=single-news.css.map */
