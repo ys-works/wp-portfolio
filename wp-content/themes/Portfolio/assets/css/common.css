@@ -682,4 +682,34 @@ a:visited {
 .sidebar-toggle__btn {
   display: block;
   border-bottom: 1px solid #ccc;
+}
+
+.error404 .not-found {
+  max-width: 1200px;
+  height: calc(70dvh - 70px);
+  margin: 0 auto;
+}
+
+.error404 .not-found .not-found-inner {
+  height: 100%;
+  padding: 20px;
+  background-image: url(../images/tsumetogi_404.svg);
+  background-size: 30%;
+  background-position: left center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .error404 .not-found .not-found-inner {
+    background-image: none;
+  }
+}
+
+.error404 .not-found .not-found-inner h1 {
+  font-size: 6.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
 }/*# sourceMappingURL=common.css.map */
