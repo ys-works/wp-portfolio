@@ -587,4 +587,26 @@
 .page-template-default .wpcf7 .wpcf7-form .wpcf7-submit:hover {
   background: #ffd700;
   color: #333;
+}
+
+.privacy-policy .section-wrap {
+  max-width: 1200px;
+  margin: 40px auto 80px;
+  width: 100%;
+}
+
+.privacy-policy .section-wrap h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: url(../images/icon/icon_niku.svg) no-repeat left center;
+  background-size: 32px 32px;
+  padding-left: 36px;
+  margin-bottom: 40px;
+  border-bottom: 4px solid;
+  -o-border-image: linear-gradient(to right, #333 0%, #333 10%, #ffd700 10%, #ffd700 50%, #333 50%, #333 100%) 1;
+     border-image: linear-gradient(to right, #333 0%, #333 10%, #ffd700 10%, #ffd700 50%, #333 50%, #333 100%) 1;
+}
+
+.privacy-policy .section-wrap p {
+  margin-bottom: 40px;
 }/*# sourceMappingURL=page.css.map */
