@@ -18,21 +18,22 @@
       <h1><?php the_title(); ?></h1>
     </div>
   </div>
-  <div class="section-wrap">
-    <section>
-      <?php the_content(); ?>
-    </section>
-  </div>
-
-  <?php // お問い合わせ用
-  if (is_page('inquiry')) : ?>
-    <div class="inquiry-form-wrap">
-      <?php while (have_posts()) : the_post(); ?>
+  <?php while (have_posts()) : the_post(); ?>
+    <?php //お問い合わせ 
+    if (is_page('inquiry')) : ?>
+      <div class="inquiry-form-wrap">
         <section class="page-inquiry">
           <?php the_content(); ?>
         </section>
-      <?php endwhile; ?>
-    </div>
-  <?php endif; ?>
+      </div>
+    <?php //その他 
+    else : ?>
+      <div class="section-wrap">
+        <section>
+          <?php the_content(); ?>
+        </section>
+      </div>
+    <?php endif; ?>
+  <?php endwhile; ?>
 </main>
 <?php get_footer(); ?>
